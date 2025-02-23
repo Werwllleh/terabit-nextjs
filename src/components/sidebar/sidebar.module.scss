@@ -1,0 +1,52 @@
+@use "@/styles/variables";
+@use "@/styles/breakpoints";
+
+.sidebar {
+  position: sticky;
+  top: 7rem;
+  border-radius: variables.$border-radius;
+  overflow: hidden;
+  background-color: variables.$semi-white;
+  padding: 3rem 2rem;
+  min-width: 30rem;
+  width: 100%;
+
+  @include breakpoints.sm {
+    padding: 2rem;
+  }
+
+  &__body {
+
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  &__item {
+    border-radius: variables.$border-radius;
+    overflow: hidden;
+    transition: background-color variables.$transition;
+
+
+    &_active,
+    &:hover {
+
+      background-color: variables.$white;
+
+      a {
+        color: variables.$textColorPrimaryHover;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    font-size: 1.6rem;
+    width: 100%;
+    color: variables.$textColorPrimary;
+    padding: .5rem;
+  }
+}

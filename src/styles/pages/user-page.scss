@@ -1,0 +1,19 @@
+@use "@/styles/variables";
+@use "@/styles/breakpoints";
+
+.user-page {
+  height: 100%;
+  border-radius: variables.$border-radius;
+  background-color: variables.$bgColor;
+
+  padding: 3rem 2rem;
+
+  @include breakpoints.sm {
+    padding: 3rem 1rem;
+  }
+
+
+  &__info {
+
+  }
+}

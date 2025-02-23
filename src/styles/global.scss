@@ -1,0 +1,47 @@
+@use "breakpoints";
+@use "variables";
+
+.page {
+  padding: 3rem 0 5rem;
+
+  &__flex {
+    display: flex;
+    align-items: stretch;
+    gap: 2rem;
+
+    @include breakpoints.sm {
+      gap: 1rem;
+    }
+
+    &_sidebar {
+      flex: 0 1 24%;
+
+      @include breakpoints.md {
+        display: none;
+      }
+    }
+
+    &_content {
+      flex: 1 1 70%;
+      border-radius: variables.$border-radius;
+      overflow: hidden;
+    }
+  }
+}
+
+.style-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  color: inherit;
+  background-color: variables.$white;
+  transition: background-color variables.$transition, color variables.$transition;
+  border-radius: variables.$border-radius;
+  user-select: none;
+}
+
+a {
+  transition: color variables.$transition, background-color variables.$transition;
+}
